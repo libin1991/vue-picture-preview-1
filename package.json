@@ -1,32 +1,21 @@
 {
-  "name": "vue-picture-preview",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@nullxlren/vue-picture-preview",
+  "version": "1.0.0",
+  "private": false,
+  "description": "vue2.x的PC的图片预览",
+  "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
-  "dependencies": {
-    "vue": "^2.5.16"
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/nullxlren/vue-picture-preview.git"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.9",
-    "@vue/cli-service": "^3.0.0-beta.9",
-    "vue-template-compiler": "^2.5.13"
-  },
-  "babel": {
-    "presets": [
-      "@vue/app"
-    ]
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "keywords": [
+    "vue2.0",
+    "picture"
+  ],
+  "author": "xlren",
+  "license": "MIT"
 }
