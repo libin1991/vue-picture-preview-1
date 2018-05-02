@@ -1,6 +1,6 @@
 {
   "name": "@nullxlren/vue-picture-preview",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": false,
   "description": "vue2.x的PC的图片预览",
   "main": "dist/vue-picture-preview.min.js",

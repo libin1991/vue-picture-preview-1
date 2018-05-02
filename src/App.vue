@@ -19,13 +19,13 @@
 
 <script>
 import HelloWorld from './components/hello-world/hello-world.vue'
-import {PicturePreview,PicturePreviewItem } from "./components/picture-preview"
+// import {PicturePreview,PicturePreviewItem } from "./components/picture-preview"
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    PicturePreview,
-    PicturePreviewItem
+    // PicturePreview,
+    // PicturePreviewItem
   },
   data(){
       return {

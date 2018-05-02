@@ -1,5 +1,6 @@
 import PicturePreview from './picture-preview.vue'
 import PicturePreviewItem from './picture-preview-item.vue'
+import "@/styles/index.css"
 export default {
     install: function (Vue, options) {
         //注册组件

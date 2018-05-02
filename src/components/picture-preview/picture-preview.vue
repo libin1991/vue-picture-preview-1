@@ -14,10 +14,10 @@
                         v-show="!loading"
                     >
                     <a @click="close" href="javascript:void(0);" class="preview-close" >✕</a>
-                    <div class="preview-nav-left" :class="{disabled:activeIndex === 0}" v-if="isHorizontalNavEnable" v-show="!preview.loading">
+                    <div class="preview-nav-left" :class="{disabled:activeIndex === 0}" v-if="isPaginationEnable" v-show="!preview.loading">
                         <a class="preview-nav-arrow" href="#" @click.prevent="prevAction" title="上一张"></a>
                     </div>
-                    <div class="preview-nav-right" :class="{disabled:activeIndex === slideInstances.length-1}" v-if="isHorizontalNavEnable" v-show="!preview.loading">
+                    <div class="preview-nav-right" :class="{disabled:activeIndex === slideInstances.length-1}" v-if="isPaginationEnable" v-show="!preview.loading">
                         <a class="preview-nav-arrow" href="#" @click.prevent="nextAction" title="下一张"></a>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                     <div class="preview-title" v-if="isTitleEnable&&current.title" v-show="!loading">
                         {{current.title}}
                     </div>
-                    <div v-if="isHorizontalNavEnable">
+                    <div v-if="isListEnable">
                         <a class="preview-list-box-btn" :class="{disabled:marginTop === 0}" href="#" @click.prevent="prevImg" title="上一张">上一张</a>
                         <div class="preview-list-box" :style="listBoxStyles">
                             <ul class="preview-list-ul" :style="listUlStyles">
@@ -47,8 +47,13 @@ import {addEvent,removeEvent} from "@/services/utils"
 export default {
     name: 'PicturePreview',
     props:{
+        //是否显示翻页按钮
+        isPaginationEnable:{
+            type:Boolean,
+            default:true
+        },
         //是否显示导航
-        isHorizontalNavEnable:{
+        isListEnable:{
             type:Boolean,
             default:true
         }
