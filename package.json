@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "description": "vue2.x的PC的图片预览",
-  "main": "index.js",
+  "main": "dist/vue-picture-preview.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
