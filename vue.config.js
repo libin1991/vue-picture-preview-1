@@ -1,3 +1,7 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack');
 // const path = require('path');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const config = require("./build/config");
@@ -40,8 +44,51 @@ module.exports = {
     }
 
   },
-  configureWebpack: () => {
-
+  configureWebpack: (config) => {
+    //config.entry
+    let output = {
+        path: config.output.path,
+        publicPath: config.output.publicPath,
+        filename: 'vue-picture-preview.min.js',
+        library: 'VuePicturePreview',
+        libraryTarget: 'umd'
+    }
+    let plugins = [
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        }),
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            compress: {
+              warnings: false
+            }
+          },
+          sourceMap: true,
+          parallel: true
+        }),
+        new ExtractTextPlugin({
+          filename: 'vue-marquee.min.css',
+          // filename: utils.assetsPath('css/[name].[contenthash].css'),
+          // Setting the following option to `false` will not extract CSS from codesplit chunks.
+          // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
+          // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`,
+          // increasing file size: https://github.com/vuejs-templates/webpack/issues/1110
+          allChunks: true,
+        }),
+        new OptimizeCSSPlugin({
+          cssProcessorOptions: true
+            ? { safe: true, map: { inline: false } }
+            : { safe: true }
+        }),
+    ]
+    if (process.env.NODE_ENV === 'production') {
+        config.output = output;
+        config.plugins = plugins;
+    } else {
+    }
+    // console.log(JSON.stringify(config.plugins,null,2),config,"config", config.entry)
   },
 
   // vue-loader options
