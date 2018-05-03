@@ -1,6 +1,6 @@
 {
   "name": "@nullxlren/vue-picture-preview",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "description": "vue2.x的PC的图片预览",
   "main": "dist/vue-picture-preview.min.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "vue-cli-service build"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/nullxlren/vue-picture-preview.git"
+    "type": "git",
+    "url": "https://github.com/nullxlren/vue-picture-preview.git"
   },
   "keywords": [
     "vue2.0",

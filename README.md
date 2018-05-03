@@ -14,7 +14,8 @@ npm i @nullxlren/vue-picture-preview --save
 
 ```javascript
 import Vue from 'vue'
-import VuePicturePreview from '@/components/picture-preview/app'
+import VuePicturePreview from "@nullxlren/vue-picture-preview"
+import "@nullxlren/vue-picture-preview/dist/vue-picture-preview.min.css"
 Vue.use(VuePicturePreview);
 ```
 
