@@ -1,7 +1,7 @@
 {
   "name": "@nullxlren/vue-picture-preview",
   "private": false,
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "vue2.x的PC的图片预览",
   "main": "dist/vue-picture-preview.min.js",
   "scripts": {
@@ -33,13 +33,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nullxlren/vue-picture-preview.git"
+    "url": "https://github.com/xlyren/vue-picture-preview.git"
   },
   "keywords": [
     "vue2.0",
     "picture",
     "preview"
   ],
-  "author": "xlren",
+  "author": "xlyren",
   "license": "MIT"
 }
